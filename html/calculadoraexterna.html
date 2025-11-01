@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jsexterno.js"></script>
+</head>
+<body>
+<nav></nav>
+<section>
+    <div id="id_div"></div>
+    <label id="id_label_1" for="id_n1">Numero 1</label>
+    <input type="number" id="id_n1" >
+    <br>
+    <label id="id_label_2" for="id_n2">Numero 2</label>
+    <input type="number" id="id_n2" >
+    <br>
+    <button onclick="document.getElementById('id_label_1').style.color='blue'">
+        Cambiar color</button>
+    <button onclick="document.getElementById('id_label_2').style.color='green'">
+        Cambiar color</button>
+    <button onclick="agregarElementoUno('id_div','<h1 >Calculador</h1>')">Agregar</button>
+    <button onclick="agregarElementoUno('id_div',construirH1())">AgregarParaConstruir</button>
+    <button onclick="eliminarElemento('id_div')">eliminar</button>
+    <button onclick="ocultarElemento('id_div')">ocultar</button>
+    <button onclick="mostarElemento('id_div')">mostrar</button>
+    <hr>
+    <button>+</button>
+    <button>-</button>
+    <button>*</button>
+    <button>/</button>
+    <label id="id_resultado" for="id_resultado"></label>
+
+
+</section>
+<aside></aside>
+<footer></footer>
+</body>
+</html>
