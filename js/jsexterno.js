@@ -52,6 +52,9 @@ function dividir(num1, num2){
 }
 
 
+/**
+ * fundamentos de js parte 1
+ */
 function fundamentosJS() {
     /* tres tipós de variables*/
     var nomnbre = "Edison ";// obsoleta
@@ -158,4 +161,128 @@ function fundamentosJS() {
         console.log(clave);
         console.log(profesor[clave]);
     }
+
+    /**
+     * aqui se abordaran los ultimos temas de fundamentos de js
+     * fundamentos de js parte 2
+     */
+    console.log("Desestructuración")
+    const e1 = {
+        nombre:'Mateo',
+        apellido:'Cayambe',
+        edad:23,
+        ecuatoriano: true,
+        genero:'M',
+        ciudad:'quito'
+    }
+
+    const e2 = {
+        nombre:'Kevin',
+        apellido:'Cayambe',
+        edad:23,
+        ecuatoriano: true,
+        genero:'M',
+        ciudad:'quito'
+    }
+
+
+    const arregloEstudiantes = [e1,e2, {
+        nombre:'Kevin3',
+        apellido:'Cayambe',
+        edad:23,
+        ecuatoriano: true,
+        genero:'M',
+        ciudad:'quito'
+    }, {
+        nombre:'Kevin4',
+        apellido:'Cayambe',
+        edad:23,
+        ecuatoriano: true,
+        genero:'M',
+        ciudad:'quito'
+    }];
+    console.log(arregloEstudiantes[0]);
+    console.log(arregloEstudiantes[2]);
+    console.log(arregloEstudiantes[3]);
+
+    /*Desestructuracion*/
+    //Arreglos
+    const ar1 = [1, 2, 3, 4, 5, 6, 7];
+    const [p1, p2, p3, p4, p5] = ar1;
+    console.log(p1);
+    console.log(p4);
+    console.log('')
+
+    const [primero, , , , , ,ultimo] = ar1;
+    console.log(primero);
+    console.log(ultimo);
+
+    //en 1 paso
+    const [pos1, pos2] = [1, 2, 3, 4, 5, 6, 7];
+    imprime(ar1);
+
+    //Objetos
+    const e3 = {
+        nombre:'Kevin',
+        apellido:'Cayambe',
+        edad:23,
+        ecuatoriano: true,
+        genero:'M',
+        ciudad:'quito'
+    }
+
+    const {nombre, ciudad} = e3;
+    console.log(nombre);
+    console.log(ciudad);
+
+    //en 1 paso
+    const {nombre:n, ciudad:ciu} = {
+        nombre:'Kevin',
+        apellido:'Cayambe',
+        edad:23,
+        ecuatoriano: true,
+        genero:'M',
+        ciudad:'quito'
+    }
+    console.log(n);
+    console.log(ciu);
+    console.log('');
+
+    const e4 = {
+        nombre:'Kevin',
+        apellido:'Cayambe',
+        edad:23,
+        ecuatoriano: true,
+        genero:'M',
+        ciudad:'quito',
+        direccion: {
+            calle: "Av. America",
+            barrio: "La Gasca",
+            numeracion: "2343"
+        }
+    }
+    console.log(e4.direccion);
+    console.log(e4.direccion.barrio);
+
+    //desestructurar un objeto
+    const {edad:ed, direccion} = e4;
+    console.log(ed);
+    console.log(direccion);
+
+    const {calle} = direccion;
+    console.log(calle);
+    console.log('');
+
+    //en 1 paso
+    const {direccion:{barrio, calle:c1, numeracion}} = e4;
+    console.log(barrio);
+    console.log(c1);
+    console.log(numeracion);
+
+    //console.log(ed); //con desestructuracion puedo reutilizar el ed para optimizar la memoria
+}
+function imprime([a, b, c]){
+    console.log(a);
+    console.log(b);
+    console.log(c);
 }
