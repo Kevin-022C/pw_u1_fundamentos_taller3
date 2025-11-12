@@ -11,30 +11,34 @@
 <body>
 <div class="container">
     <header>Calculadora Virtual</header>
-    <nav>Menu de navegacion</nav>
+    <nav>Menú de navegación</nav>
     <section>
         <div id="calculadora">
            <!-- <label for="">0+1=1</label><br>-->
             <div id="display"></div>
-            <button onclick="borrarC()">C</button>
-            <button onclick="borrar()">&#8592</button>
+            <button onclick="limpiar()">C</button>
+            <button onclick="borrarUltimo()">&#8592</button>
             <button onclick="mostrarDisplay('%')">%</button>
             <button onclick="mostrarDisplay('/')">/</button>
+
             <button onclick="mostrarDisplay(7)">7</button>
             <button onclick="mostrarDisplay(8)">8</button>
             <button onclick="mostrarDisplay(9)">9</button>
             <button onclick="mostrarDisplay('*')">*</button>
+
             <button onclick="mostrarDisplay(4)">4</button>
             <button onclick="mostrarDisplay(5)">5</button>
             <button onclick="mostrarDisplay(6)">6</button>
             <button onclick="mostrarDisplay('-')">-</button>
+
             <button onclick="mostrarDisplay(1)">1</button>
             <button onclick="mostrarDisplay(2)">2</button>
             <button onclick="mostrarDisplay(3)">3</button>
             <button onclick="mostrarDisplay('+')">+</button>
+
             <button onclick="mostrarDisplay(0)">0</button>
             <button onclick="mostrarDisplay('.')">.</button>
-            <button >=</button>
+            <button onclick="calcular()" >=</button>
 
 
         </div>
