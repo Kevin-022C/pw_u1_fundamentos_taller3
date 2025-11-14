@@ -1,0 +1,63 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    background-color: #2a877f;
+}
+p:before{
+    content: attr(type);/*al elemento p habilite el contenido del atributo type*/
+    display: block;
+    font-size: 20px;
+    color: rgb(14, 14, 14);
+    margin-top: 45px; /*espacio entre nombre,apellido,etc*/
+}
+
+
+input {
+    width: 270px;
+    border: none;
+    border-bottom: 2px solid rgb(5, 126, 29);
+    background: none;
+    color: rgb(2, 7, 70);
+}
+
+input:focus {
+    outline: none; /*no se enmarca*/
+    border-bottom: 3px solid rgb(82, 190, 223);
+}
+
+.formulario {
+    background-color: rgb(23, 212, 218);
+    border-radius: 10px;
+    padding: 30px 40px; /*30 se aplica arriba y abajo y 40 dere,izq*/
+    box-shadow: 20px 20px rgb(4, 41, 121);
+}
+
+
+button {
+    background: rgb(4, 41, 121);
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: rgb(244, 246, 250);
+    margin-top: 20px;
+}
+
+.centrar-boton {
+    display: flex;
+    justify-content: center;
+}
+
+
+h2, header {
+    color: #0e0e0e;
+    border-bottom: 2px solid rgb(14, 14, 14);
+    font-size: 35px;
+}
+
+footer {
+    padding: 40px 20px;
+    color: #0e0e0e;
+}
