@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario Tarjeta</title>
+    <link rel="stylesheet" href="../css/formularioTarjeta.css">
+    <script src="../js/formularioTatjeta.js"></script>
+</head>
+<body>
+    <title>
+    </title>
+    <nav>
+    </nav>
+    <section id="cajaPrincipal">
+        <div class="cajaHijo">
+            <img src="../img/targeta_black.PNG" width="300" height="150" alt="la imagen no cargo"
+            border="1px">
+        </div>
+        <div class="cajaHijo">
+            
+            <form class="formulario">
+                <h1>Payment Details</h1>
+
+                <div id="id_msg_error" class="msg_error"></div>
+
+                <p type="Cardholder name">
+                    <input type="text" id="id_nombre_card" class="uno" name="nombre" placeholder="nombre del titular">
+                    <span id="id_error_nombre_card"class="error_asterisco" </span>
+                </p>
+
+                <p type="Card Number">
+                    <input type="number" id="id_number_card" class="uno" name="numeroNip" max="10" placeholder="0000000000">
+                    <span id="id_error_numero_card"class="error_asterisco" </span></span>
+                </p>
+
+                <div id="inputEnFila">
+
+                    <p type="expire date">
+                        <input type="text" id="id_fecha_exp" class="dos" placeholder="MM/YY" maxlength="5" pattern="(0[1-9]|1[0-2])\/\d{2}" name="exp">
+                        <span id="id_error_expire_date"class="error_asterisco" </span></span>
+                    </p>
+                    
+                    <p type="cvv">
+                        <input type="number" id="id_numero_cvv" max="3" class="dos" name="numero_cvv" placeholder="000">
+                        <span id="id_error_cvv"class="error_asterisco" </span></span>
+                    </p>
+                </div>
+                <div class="centrar-boton">
+                        <button onclick="guardar()">Confirm</button>
+                    </div>
+
+            </form>
+        </div> 
+    </section>
+    <footer></footer>
+    
+</body>
+</html>
